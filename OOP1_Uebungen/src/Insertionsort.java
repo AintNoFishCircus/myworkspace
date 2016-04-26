@@ -7,6 +7,7 @@ public class Insertionsort {
 		
 		for (i = 0; i < liste.length; i++){
 			liste[i] = (int) (Math.random() * 100);
+			System.out.print(liste[i] + ", ");
 		}
 		for (j = 1; j < liste.length; j++){
 			puffer = liste[j];
