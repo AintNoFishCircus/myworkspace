@@ -1,0 +1,40 @@
+
+public class Uebungen {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println(GGT(24,14));
+		System.out.println(GGT2(9,30));
+
+	}
+	
+	public static int GGT(int p, int q) {		//Groeßter gemeinsamer Teiler
+		int r;
+		
+		if (q > p) {
+			r = q;
+			q = p;
+			p = r;
+		}
+		while(q != 0){
+			r = p % q;
+			p = q;
+			q = r;
+		}
+		return p;
+		
+	}
+
+
+
+	public static int GGT2(int m, int n){	
+		while (m != n){
+			if (m > n){
+				m -= n;
+			}else{
+				n -= m;
+			}
+		}
+		return m;
+	}
+}

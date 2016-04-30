@@ -1,0 +1,27 @@
+
+public class Uebungen {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		GGT(24,14);
+
+	}
+	
+	public static int GGT(int p, int q) {
+		int r;
+		
+		if (q > p) {
+			r = q;
+			q = p;
+			p = r;
+		}
+		while(q != 0){
+			r = p % q;
+			p = q;
+			q = r;
+		}
+		return p;
+		
+	}
+
+}
