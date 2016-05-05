@@ -3,13 +3,33 @@ public class Uebungen {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		System.out.println(GGT(24,14));
+		/*System.out.println(GGT(24,14));
 		System.out.println(GGT2(9,30));
-		insertionsort();
+		insertionsort();*/
+		Minimum();
 
 	}
 	
-	public static int GGT(int p, int q) {		//Groeﬂter gemeinsamer Teiler
+	public static double Mittelwert(){
+		double [] zahlenliste = new double [10];
+		double count = 0;
+		double summe = 0;
+		double result;
+		for (int i = 0; i < zahlenliste.length; i++){
+			zahlenliste [i] = (Math.random() * 100);
+			System.out.println(zahlenliste[i]);
+		}
+		for (int i = 0; i < zahlenliste.length; i++){
+			summe += zahlenliste[i];
+			count += 1;
+		}
+		result = summe / count;
+		
+		return result ;
+		
+	}
+	
+ 	public static int GGT(int p, int q) {		//Groeﬂter gemeinsamer Teiler
 		int r;
 		
 		if (q > p) {
@@ -26,6 +46,25 @@ public class Uebungen {
 	}
 
 
+ 	public static void Minimum(){
+ 		int [] zahlenliste = new int [10];
+ 		int min = 0;
+ 		int pos = 0;
+ 		
+ 		for (int j = 0; j < zahlenliste.length; j++){
+ 			zahlenliste[j]= (int) (Math.random()* 100);
+ 			System.out.println(zahlenliste[j]);
+ 		}
+ 		System.out.println("");
+ 		for (int i = 1; i < zahlenliste.length; i++){
+ 			if (zahlenliste[i] < zahlenliste[pos]){
+ 				min = zahlenliste[i];
+ 				pos = i ; 
+ 			}
+ 		}
+ 		System.out.println("Die kleinste Zahl der Liste ist " + min + " und befindet"
+ 				+ " sich an Position Nr: " + pos + "." );
+ 	}
 
 	public static int GGT2(int m, int n){	
 
