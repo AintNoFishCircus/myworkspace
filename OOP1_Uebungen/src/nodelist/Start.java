@@ -18,7 +18,17 @@ public class Start {
 		System.out.println(list.value());
 		list.iterate(1);
 		System.out.println(list.value());
-		
+		list.iterate(1);
+		list.iterate(-1);
+		list.iterate(-1);
+		list.iterate(-1);
+		System.out.println(list.value());
+		list.iterate(-1);
+		System.out.println(list.value());
+		list.iterate(-1);
+		System.out.println(list.value());
+
+
 	}
 
 }

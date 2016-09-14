@@ -5,6 +5,7 @@ public class Nodelist {
 	private Node tail;
 	private Node it;
 	
+	
 	public Nodelist(){
 		head = null;
 		tail = null;
@@ -51,8 +52,17 @@ public class Nodelist {
 		}
 	}
 	
+	public boolean hasNext(){
+		if (it.getNext() != null){
+			return true;
+		}else{
+			System.out.println("End of List");
+			return false;
+		}
+	}
+	
 	public void iterate(int i){
-		if( i == 1 && it.getNext()!= null){
+		if( i == 1 && this.hasNext()){
 			it = it.getNext();
 		}else if(i == -1 && it.getPrevious()!= null){
 			it = it.getPrevious();
